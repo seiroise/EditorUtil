@@ -31,8 +31,8 @@ namespace EditorUtil {
 					Rect maxRect = new Rect(sliderRect.x + sliderRect.width + PADDING, position.y, NUM_WIDTH, position.height);
 
 					//プロパティの取得
-					SerializedProperty minProp = property.FindPropertyRelative("min");
-					SerializedProperty maxProp = property.FindPropertyRelative("max");
+					SerializedProperty minProp = property.FindPropertyRelative("_min");
+					SerializedProperty maxProp = property.FindPropertyRelative("_max");
 					//値の取得
 					float min = minProp.floatValue;
 					float max = maxProp.floatValue;

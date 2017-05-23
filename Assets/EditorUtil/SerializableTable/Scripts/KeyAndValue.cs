@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 namespace EditorUtil {
@@ -6,7 +7,7 @@ namespace EditorUtil {
 	/// <summary>
 	/// SerializableなKeyValuePair
 	/// </summary>
-	[System.Serializable]
+	[Serializable]
 	public class KeyAndValue<TKey, TValue> {
 
 		[SerializeField]
