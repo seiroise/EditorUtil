@@ -9,11 +9,18 @@ namespace EditorUtil {
 	[System.Serializable]
 	public struct MinMax {
 
+		/// <summary>
+		/// 最小値
+		/// </summary>
 		[SerializeField]
-		private float _min;		//最小値
+		private float _min;
 		public float min { get { return _min; } set { _min = value; } }
+
+		/// <summary>
+		/// 最大値
+		/// </summary>
 		[SerializeField]
-		private float _max;		//最大値
+		private float _max;
 		public float max { get { return _max; } set { _min = value; } }
 
 		public float random { get { return Random.Range(min, max); } }
@@ -31,6 +38,15 @@ namespace EditorUtil {
 		/// <param name="value">値</param>
 		public float Clamp(float value) {
 			return Mathf.Clamp(value, min, max);
+		}
+
+		/// <summary>
+		/// 指定した値が最小値と最大値の範囲に収まっているか確認する
+		/// </summary>
+		/// <returns>範囲ないならばtrueを返す</returns>
+		/// <param name="value">値</param>
+		public bool CheckRange(float value) {
+			return _min <= value && value <= _max;
 		}
 	}
 }
